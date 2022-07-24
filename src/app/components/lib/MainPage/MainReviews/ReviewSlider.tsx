@@ -11,14 +11,5 @@ export default function ReviewSlider({ active, length }: Props) {
         return <li key={index} className={cls} />;
     });
 
-    return (
-        // <ul className='slider'>
-        //     <li className='slider-item slider-item-active' />
-        //     <li className='slider-item' />
-        //     <li className='slider-item' />
-        //     <li className='slider-item' />
-        //     <li className='slider-item' />
-        // </ul>
-        <ul className='slider'>{sliders}</ul>
-    );
+    return <ul className='slider'>{sliders}</ul>;
 }

@@ -1,5 +1,4 @@
 import React from 'react';
-
 import SvgExclamation from '../../Svg/Actions/SvgExclamation';
 import Info from './Info';
 import { InfoMsgT } from './messagesInfo';
