@@ -5,8 +5,10 @@ import Svg from './Svg';
 export default function SvgCalendar({ height }: SvgType) {
     return (
         <Svg
-            src='./svg/calendar.svg' height={height}
+            src='./svg/calendar.svg'
+            height={height}
             alt='Calendar'
+            className='date-picker-img'
         />
     );
 }

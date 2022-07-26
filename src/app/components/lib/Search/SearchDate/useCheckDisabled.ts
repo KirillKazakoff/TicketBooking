@@ -12,7 +12,7 @@ const useCheckDisabled = () => {
 
         dispatch(setFormError({ name, formError: searchMessages.noDateTo }));
         setTimeout(() => {
-            dispatch(setFormError({ name, formError: '' }));
+            // dispatch(setFormError({ name, formError: '' }));
         }, 3000);
     };
 

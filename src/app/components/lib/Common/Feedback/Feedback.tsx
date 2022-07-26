@@ -15,7 +15,7 @@ export default function Feedback(props: FeedbackProps) {
     } = props;
 
     if (!error && !formError) return null;
-    if (!wasFocused && isFormMsgHidden) return null;
+    if (!wasFocused && isFormMsgHidden && !formError) return null;
 
     return (
         <div className={`feedback feedback-${cls}`}>
