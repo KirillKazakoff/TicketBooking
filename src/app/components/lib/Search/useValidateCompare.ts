@@ -12,6 +12,8 @@ const useValidateCompare: UseValidateCompareT = (dateTo, dateFrom) => {
     const [stateError, setStateError] = useState('');
 
     const setCompareError = (formError: string) => {
+        if (dateTo.formError || dateFrom.formError) return;
+
         dispatch(setFormError({ name: 'dateTo', formError }));
         dispatch(setFormError({ name: 'dateFrom', formError }));
         setStateError(formError);
