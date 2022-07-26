@@ -284,6 +284,10 @@ html {
     align-self: stretch;
 }
 
+.search-input::first-letter {
+    text-transform: uppercase;
+}
+
 .search-input::placeholder::first-letter {
     text-transform: uppercase;
 }
@@ -344,6 +348,10 @@ html {
     padding: 20px;
     flex: 1;
     border-radius: 3px;
+}
+
+.search-way-tip::first-letter {
+    text-transform: uppercase;
 }
 
 .search-way-tip:hover {
@@ -2298,6 +2306,10 @@ html {
     display: flex;
 }
 
+.confirmation-ticket {
+    border: none;
+}
+
 /* confirmation-list */
 .confirmation-list {
     padding-top: 20px;
@@ -3539,6 +3551,7 @@ html {
     filter: var(--red-filter);
 }
 
+/* 
 * {
     scroll-behavior: smooth;
-}
+} */

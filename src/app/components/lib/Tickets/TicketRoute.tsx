@@ -1,4 +1,5 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import TicketLeft from './Ticket/TicketLeft';
 import TicketCenter from './Ticket/TicketCenter';
 import { TicketProps } from '../../../types/typesTicket';
@@ -9,6 +10,7 @@ import TicketToPlaces from './Ticket/TicketToPlaces';
 import { refreshPasPlaces } from '../../../redux/slices/pasPlacesSlice';
 
 export default function Ticket({ ticket }: TicketProps) {
+    const navigate = useNavigate();
     const dispatch = useAppDispatch();
     const { departure, arrival } = ticket.ticketRoute;
     const routes = { departure, arrival };
@@ -17,6 +19,7 @@ export default function Ticket({ ticket }: TicketProps) {
         dispatch(refreshPlaces());
         dispatch(refreshPasPlaces());
         dispatch(setActiveTicket(ticket));
+        setTimeout(() => navigate('/places'), 1);
     };
 
     return (

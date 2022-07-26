@@ -16,7 +16,7 @@ const useAbortFetch: UseAbortFetchT = () => {
 
     const checkCityMatch: CheckCityMatchT = (input, cities, aborter) => {
         const { name: inputName, value } = input;
-        const selectedCity = cities.find((city) => city.name === value.trim());
+        const selectedCity = cities.find((city) => city.name === value.toLowerCase());
 
         if (selectedCity) {
             aborter.abort();

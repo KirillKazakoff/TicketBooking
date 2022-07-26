@@ -51,6 +51,10 @@
     font-size: 30px;
 }
 
+.bar-desc::first-letter {
+    text-transform: uppercase;
+}
+
 .bar-active {
     background-color: var(--bg-main);
 }

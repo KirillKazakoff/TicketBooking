@@ -8,7 +8,7 @@ import { useAppSelector, useAppDispatch } from '../../redux/reduxHooks';
 import TicketsPagination from '../lib/Tickets/TicketsPagination/TicketsPagination';
 import { selectTotalCount } from '../../redux/slices/ticketsSlice';
 import { selectPageStatus, setPageCount } from '../../redux/slices/loaderSlice';
-import PageLoaderScrolled from '../lib/Common/PageLoader/PageLoaderScrolled';
+import PageLoaderMain from '../lib/Common/PageLoader/PageLoaderMain';
 
 export default function TicketsRoute() {
     const dispatch = useAppDispatch();
@@ -20,7 +20,7 @@ export default function TicketsRoute() {
     const pageStatus = useAppSelector(selectPageStatus);
 
     if (pageStatus !== 'loaded') {
-        return <PageLoaderScrolled />;
+        return <PageLoaderMain />;
     }
 
     return (

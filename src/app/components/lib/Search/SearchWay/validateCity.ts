@@ -11,7 +11,12 @@ const validateCity: ValidateCityT = (inputEl, stateCity, status) => {
 
     let customValidity = '';
 
-    if (value && stateCity !== value.trim() && validity.valid && status !== 'loading') {
+    if (
+        value
+        && stateCity !== value.trim().toLowerCase()
+        && validity.valid
+        && status !== 'loading'
+    ) {
         customValidity = 'noCity';
     }
 

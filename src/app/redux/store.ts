@@ -42,7 +42,7 @@ export const store = configureStore({
         paymentFields: paymentReducer,
         paymentForm: paymentFormReducer,
     },
-    // preloadedState,
+    preloadedState,
 });
 
 window.addEventListener('beforeunload', () => {

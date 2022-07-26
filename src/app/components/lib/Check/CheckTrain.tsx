@@ -16,7 +16,7 @@ export default function CheckTrain() {
             <header className='passenger-header confirmation-passenger-header framed-passengers'>
                 <span className='passenger-desc'>Поезд</span>
             </header>
-            <li className='ticket shadowed'>
+            <li className='ticket confirmation-ticket'>
                 <TicketLeft departure={routes.departure} />
                 <TicketCenter routes={routes} />
                 <TicketRight routes={routes} seatsInfoAux={activeTicket.seatsInfoAux}>

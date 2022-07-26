@@ -5,6 +5,7 @@ import { useAppDispatch } from '../../../../redux/reduxHooks';
 import { setInput, setCities } from '../../../../redux/slices/searchWaySlice';
 import { InputRefT } from '../../../../types/typesForms';
 import { SearchedCities } from '../../../../types/typesSearch';
+import { firstLetterCap } from '../../Common/utils/firstLetter';
 
 type Props = SearchedCities & {
     inputRef: InputRefT;
@@ -23,7 +24,7 @@ export default function SearchWayTips(props: Props) {
         if (!selectedCity) return;
 
         dispatch(setCities({ inputName: input.name, cities: [selectedCity] }));
-        dispatch(setInput({ name: input.name, value: name }));
+        dispatch(setInput({ name: input.name, value: firstLetterCap(name) }));
     };
 
     const citiesHtml = cities.map((city) => (
