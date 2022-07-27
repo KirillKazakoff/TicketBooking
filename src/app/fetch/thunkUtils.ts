@@ -1,8 +1,6 @@
 import { setPageStatus } from '../redux/slices/loaderSlice';
 import { RequestType } from '../types/typesRequest';
 
-// const baseUrl = 'http://80.87.192.113:3001';
-// const baseUrl = 'https://fe-diplom.herokuapp.com';
 const baseUrl = 'https://netology-trainbooking.netoservices.ru';
 
 export function timeoutMock(timeout: number) {

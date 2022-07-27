@@ -12,7 +12,10 @@ const useValidateCompare: UseValidateCompareT = (dateTo, dateFrom) => {
     const [stateError, setStateError] = useState('');
 
     const setCompareError = (formError: string) => {
-        if (dateTo.formError && dateTo.formError !== searchMessages.dateMismatch) return;
+        const isErrorBefore = dateTo.formError || dateFrom.formError;
+        const isNotMismatch = dateFrom.formError !== searchMessages.dateMismatch;
+
+        if (isErrorBefore && isNotMismatch) return;
 
         dispatch(setFormError({ name: 'dateTo', formError }));
         dispatch(setFormError({ name: 'dateFrom', formError }));

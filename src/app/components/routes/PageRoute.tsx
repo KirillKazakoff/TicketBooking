@@ -26,18 +26,21 @@ export default function PageRoute() {
     const headerRef = useRef<HTMLDivElement>(null);
     const outletRef = useRef<HTMLDivElement>(null);
     const pageStatus = useAppSelector(selectPageStatus);
+    const path = activeLocation.pathname;
+    const wasTicket = useRef<boolean>(false);
 
     useEffect(() => {
-        if (pageStatus !== 'loaded' || !headerRef.current) return;
+        if (pageStatus !== 'loaded' || !headerRef.current || wasTicket.current) return;
+
         headerRef.current.scrollIntoView({ behavior: 'smooth', block: 'start' });
-    }, [pageStatus]);
+        if (path === '/tickets') wasTicket.current = true;
+    }, [pageStatus, path]);
 
     useEffect(() => {
-        const path = activeLocation.pathname;
         if (!checkLocation) return;
         if (path === '/' || path === '/tickets') return;
         outletRef.current.scrollIntoView({ behavior: 'smooth', block: 'start' });
-    }, [activeLocation, checkLocation]);
+    }, [path, checkLocation]);
 
     if (!checkLocation) return null;
 

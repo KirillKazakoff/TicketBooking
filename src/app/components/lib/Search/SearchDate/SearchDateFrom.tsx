@@ -6,20 +6,20 @@ import { SearchDateDir } from '../../../../types/typesSearch';
 
 export default function SearchDateFrom(props: SearchDateDir) {
     const {
-        onChange, onFocus, onBlur, validate, onClickCheck,
+        onChange, onFocus, onBlur, validate,
     } = props;
     const name = 'dateFrom';
     const timeObj = useTime(name);
 
     return (
         <SearchDateInput
-            onClickCheck={onClickCheck}
             validate={validate}
             time={timeObj}
             name={name}
             onChange={onChange}
             onFocus={onFocus}
             onBlur={onBlur}
+            placeholder='ДД/ММ/ГГ (Обратно)'
         />
     );
 }

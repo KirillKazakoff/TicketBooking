@@ -14,7 +14,6 @@ import {
 } from '../../../../redux/slices/searchDateSlice';
 
 import { useAppDispatch } from '../../../../redux/reduxHooks';
-import useCheckDisabled from './useCheckDisabled';
 import { SearchSectionProps } from '../../../../types/typesSearch';
 import useChange from '../../Common/Form/useChange';
 import useSelect from '../../Common/Form/useSelect';
@@ -26,18 +25,22 @@ export default function SearchDate({ cls = '' }: SearchSectionProps) {
         dispatch(
             setDateTime({ name: 'dateTo', dateTime: DateTime.now().toFormat('dd/LL/yy') }),
         );
+        dispatch(
+            setDateTime({
+                name: 'dateFrom',
+                dateTime: DateTime.now().toFormat('dd/LL/yy'),
+            }),
+        );
     }, [dispatch]);
 
     const onChange = useChange(setInput);
     const validate = useValidateInput(setError);
     const { onBlur, onFocus } = useSelect(setActive, setBlured);
-    const { onClickCheck } = useCheckDisabled();
 
     return (
         <SearchFormRow cls={cls}>
             <SearchRowTitle>Дата</SearchRowTitle>
             <SearchDateTo
-                onClickCheck={onClickCheck}
                 onChange={onChange}
                 onBlur={onBlur}
                 onFocus={onFocus}
@@ -47,7 +50,7 @@ export default function SearchDate({ cls = '' }: SearchSectionProps) {
             <span className='space25' />
 
             <SearchDateFrom
-                onClickCheck={onClickCheck}
+                // onClickCheck={onClickCheck}
                 onChange={onChange}
                 onBlur={onBlur}
                 onFocus={onFocus}

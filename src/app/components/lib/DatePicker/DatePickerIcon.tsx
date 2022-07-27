@@ -3,12 +3,11 @@ import SvgCalendar from '../Svg/SvgCalendar';
 import { SetPickerActiveT } from '../../../types/typesSearch';
 
 type Props = {
-    onClickCheck?: () => void | null;
     height: number;
     setActive: SetPickerActiveT;
 };
 
-export default function DatePickerIcon({ onClickCheck, height, setActive }: Props) {
+export default function DatePickerIcon({ height, setActive }: Props) {
     useEffect(() => {
         const listener = (e: MouseEvent) => {
             const target = e.target as HTMLElement;
@@ -24,7 +23,6 @@ export default function DatePickerIcon({ onClickCheck, height, setActive }: Prop
     }, [setActive]);
 
     const onClick = () => {
-        if (onClickCheck) onClickCheck();
         setActive((prev) => !prev);
     };
 
@@ -37,7 +35,3 @@ export default function DatePickerIcon({ onClickCheck, height, setActive }: Prop
         </button>
     );
 }
-
-DatePickerIcon.defaultProps = {
-    onClickCheck: null,
-};

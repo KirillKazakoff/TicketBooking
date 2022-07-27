@@ -2,7 +2,6 @@ import React, { HTMLProps } from 'react';
 import type { TimeObjT } from '../components/lib/DatePicker/utils/useTime';
 import type { CheckCityMatchT } from '../components/lib/Search/SearchWay/useAbort';
 import type { ValidateInputT, OnChangeFetchT, FormFeedbackT } from './typesForms';
-import type { OnClickCheckT } from '../components/lib/Search/SearchDate/useCheckDisabled';
 import { DatesStateT, WaysStateT, WayStateT } from './typesSlices';
 
 export type SearchedCity = { _id: string; name: string };
@@ -24,7 +23,6 @@ export type SearchWayInputProps = {
 
 export type SearchDateDir = HTMLProps<HTMLInputElement> & {
     validate: ValidateInputT;
-    onClickCheck: OnClickCheckT;
 };
 
 export type SearchDateInputProps = {

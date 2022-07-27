@@ -1,4 +1,4 @@
-import React, { useRef } from 'react';
+import React from 'react';
 import PageLoader from './PageLoader';
 
 export default function PageLoaderMain() {

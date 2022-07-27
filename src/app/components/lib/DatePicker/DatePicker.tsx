@@ -19,7 +19,7 @@ export default function DatePicker(props: DatePickerProps) {
     const activeDate = useAppSelector((state) => state.searchDate[name].activeDate);
     const pickerState = useAppSelector((state) => state.searchDate[name].pickerState);
 
-    if (!pickerState || !isPickerActive) return null;
+    if (!isPickerActive) return null;
 
     const { year, month } = pickerState.date;
 
