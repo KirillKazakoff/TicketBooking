@@ -86,7 +86,6 @@ html {
 
 /* header */
 .header {
-    height: 100vh;
     min-height: 590px;
     background-image: url('../img/header/backHeaderMain.png');
     background-size: cover;
@@ -94,6 +93,10 @@ html {
     color: white;
     display: flex;
     flex-direction: column;
+}
+
+.header-main {
+    height: 100vh;
 }
 
 .header-central {
