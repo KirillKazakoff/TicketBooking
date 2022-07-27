@@ -38,10 +38,6 @@ export default function Header() {
         HeaderOutlet = HeaderOutletSuccess;
         className = 'success';
     }
-    // if (pathname === '/error') {
-    //     HeaderOutlet = HeaderOutletError;
-    //     className = 'error';
-    // }
 
     return (
         <header className={`header header-${className}`}>
