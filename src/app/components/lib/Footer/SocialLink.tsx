@@ -1,11 +1,12 @@
+/* eslint-disable jsx-a11y/no-static-element-interactions */
 import React from 'react';
 
-type SocialLinkProps = { href: string; children: React.ReactNode };
+type SocialLinkProps = { onClick: () => void; children: React.ReactNode };
 
-export default function SocialLink({ href, children }: SocialLinkProps) {
+export default function SocialLink({ onClick, children }: SocialLinkProps) {
     return (
-        <a href={href} className='social-link'>
+        <div onClick={onClick} className='social-link'>
             {children}
-        </a>
+        </div>
     );
 }

@@ -2844,6 +2844,10 @@ html {
     filter: var(--collapse-filter);
 }
 
+.contact-link-icon {
+    min-width: 30px;
+}
+
 .contact-link-wrapper {
     width: 280px;
     display: flex;

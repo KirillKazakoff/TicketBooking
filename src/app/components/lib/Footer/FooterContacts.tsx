@@ -11,24 +11,33 @@ export default function FooterContacts() {
             <h2 className='footer-subtitle contacts-title'>Свяжитесь с нами</h2>
             <ul className='contacts-list'>
                 <FooterContact
-                    href='tel:8 (800) 000 00 00'
-                    icon={<SvgPhone height={30} />}
-                    desc='8 (800) 000 00 00'
+                    // href='tel:8 (914) 856 47 43'
+                    // icon={<SvgPhone height={30} />}
+                    href='https://t.me/Teahohotka'
+                    icon={(
+                        <img
+                            src='./svg/socials/plane.svg'
+                            className='ic-tg'
+                            alt='telegram'
+                            width='30px'
+                        />
+                    )}
+                    desc='телеграм teahohotkи'
                 />
                 <FooterContact
-                    href='mailto:inbox@mail.ru'
+                    href='mailto: kirillkazakovwork@gmail.com'
                     icon={<SvgMail height={25} />}
-                    desc='inbox@mail.ru'
+                    desc='kirillkazakovwork@gmail.com'
                 />
                 <FooterContact
-                    href='skype:tu.train.tickets'
+                    href='live:kekazavr228'
                     icon={<SvgSkype height={30} />}
-                    desc='tu.train.tickets'
+                    desc='Мой скайп - мой кайф'
                 />
                 <FooterContact
-                    href='http://maps.google.com/?q=г. Москва ул. Московская 27-35 555 555'
-                    icon={<SvgLocation height={28} />}
-                    desc='г. Москва ул. Московская 27-35 555 555'
+                    href='http://maps.google.com/?q=Руанда, Танзания'
+                    icon={<SvgLocation height={30} />}
+                    desc='gugl mep ruanda'
                 />
             </ul>
         </div>
