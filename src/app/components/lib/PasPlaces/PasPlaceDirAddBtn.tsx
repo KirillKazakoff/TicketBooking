@@ -22,6 +22,7 @@ export default function PasPlaceAddBtn({ dir }: DirTProp) {
                 alt='arrow-subtle'
                 className='pas-places-add-icon'
             />
+
             <button
                 className='btn btn-pas-places-add-passenger'
                 type='button'

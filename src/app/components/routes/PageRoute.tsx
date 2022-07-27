@@ -37,8 +37,7 @@ export default function PageRoute() {
     }, [pageStatus, path]);
 
     useEffect(() => {
-        if (!checkLocation) return;
-        if (path === '/' || path === '/tickets') return;
+        if (!checkLocation || path === '/tickets' || path === '/') return;
         outletRef.current.scrollIntoView({ behavior: 'smooth', block: 'start' });
     }, [path, checkLocation]);
 

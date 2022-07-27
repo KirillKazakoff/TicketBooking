@@ -1,6 +1,10 @@
-# Дипломная работа к профессии frontend-разработчик (Система бронирования ЖД билетов)
-
+# Дипломная работа к профессии frontend-разработчик (Система бронирования ЖД билетов) 
 **Ссылка на сайт: [GitHubPages][gitPages]**
+
+ПРЕДУПРЕЖДЕНИЕ: Сервер делал не я, если при поиске не выдаются билеты, то попробуйте несколько раз поискать на направлении Москва_Санкт-Петербург...
+
+Если совсем никак, то смотрите описание в документации...
+
 
 *Оглавление*
 - [Дипломная работа к профессии frontend-разработчик (Система бронирования ЖД билетов)](#дипломная-работа-к-профессии-frontend-разработчик-система-бронирования-жд-билетов)
@@ -234,8 +238,8 @@ yarn start
 
 
 <!-- Links in text -->
+[GitPages]: https://kirillkazakoff.github.io/finalDiploma/
 [portfolioSrc]: https://github.com/KirillKazakoff/portfolio/tree/master/src
-[GitPages]: https://github.com/KirillKazakoff/finalDiploma
 [mainPageGif]: ./assets/MainPage.gif
 [ticketsGif]: ./assets/tickets.gif
 [placesGif]: ./assets/places.gif

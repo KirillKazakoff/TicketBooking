@@ -28,7 +28,6 @@ export default function SearchDateInput(props: SearchDateInputProps) {
     const dateState = useAppSelector((state) => state.searchDate[name]);
     const inputEl = useRef<HTMLInputElement>(null);
     const validityCls = getValidityCls(dateState);
-    // const onClick = onClickCheck ? onClickCheck(disabled, name) : null;
     const [isPickerActive, setPickerActive] = useState(false);
     const validateDate = useValidateDate();
 
@@ -49,7 +48,6 @@ export default function SearchDateInput(props: SearchDateInputProps) {
                 isPickerActive={isPickerActive}
                 cls='form'
             />
-
             <input
                 pattern='^\d{2}\/\d{2}\/\d{2}$'
                 ref={inputEl}

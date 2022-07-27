@@ -50,7 +50,6 @@ export default function SearchDate({ cls = '' }: SearchSectionProps) {
             <span className='space25' />
 
             <SearchDateFrom
-                // onClickCheck={onClickCheck}
                 onChange={onChange}
                 onBlur={onBlur}
                 onFocus={onFocus}

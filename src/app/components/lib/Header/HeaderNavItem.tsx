@@ -1,12 +1,12 @@
-import { HashLink as Link } from 'react-router-hash-link';
+// import { HashLink as Link } from 'react-router-hash-link';
 import React, { HTMLProps } from 'react';
 
-type HeaderNavItemProps = HTMLProps<HTMLLinkElement>;
+type HeaderNavItemProps = HTMLProps<HTMLLIElement>;
 
-export default function HeaderNavItem({ href, children }: HeaderNavItemProps) {
+export default function HeaderNavItem({ children, onClick }: HeaderNavItemProps) {
     return (
-        <Link to={href} className='nav-link'>
+        <li className='nav-link' onClick={onClick}>
             {children}
-        </Link>
+        </li>
     );
 }
