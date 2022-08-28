@@ -24,13 +24,13 @@ export default function SubscriptionInput(props: Props) {
         const input = inputEl.current;
 
         validate(input);
-    });
+    }, [value]);
 
     useEffect(() => {
         if (status === 'loaded') {
             setTimeout(() => dispatch(setFetchStatus('idle')), 2500);
         }
-    }, [status, dispatch]);
+    }, [status, value, dispatch]);
 
     return (
         <InputWrapper cls='subscription-input-wrapper'>

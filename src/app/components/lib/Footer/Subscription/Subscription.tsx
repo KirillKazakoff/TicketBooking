@@ -1,5 +1,5 @@
 /* eslint-disable jsx-a11y/label-has-associated-control */
-import React from 'react';
+import React, { memo, useCallback, useMemo } from 'react';
 import {
     setActive,
     setBlured,
@@ -19,6 +19,7 @@ export default function FooterSubscription() {
     const dispatch = useAppDispatch();
     const onChange = useChange(setInput);
     const validate = useValidateInput(setError);
+
     const { onBlur, onFocus } = useSelect(setActive, setBlured);
     const { subscribe } = useAppSelector((state) => state.subscribe);
     const { error, value } = subscribe;
