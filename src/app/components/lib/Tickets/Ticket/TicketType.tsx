@@ -2,12 +2,12 @@ import React from 'react';
 import { nanoid } from 'nanoid';
 import TicketTypeTip from './TicketTypeTip';
 import { TicketTypeProps } from '../../../../types/typesTicket';
-import { getCarriageName, getAllAvailable, getSeatName } from './ticketUtils';
+import { getCarriageName, getSeatName } from './ticketUtils';
 import { getMinFromTypes } from '../getMinPrices';
 
 export default function TicketType({ typeKey, typeInfo }: TicketTypeProps) {
     const typeName = getCarriageName(typeKey);
-    const allAvailable = getAllAvailable(typeInfo.availableType);
+    const allAvailable = typeInfo.availableType.total;
     const minPrice = getMinFromTypes(typeInfo.minPriceType);
 
     let ticketTypeTips = null;

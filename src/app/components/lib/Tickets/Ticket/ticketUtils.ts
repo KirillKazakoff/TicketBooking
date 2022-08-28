@@ -1,5 +1,4 @@
 /* eslint-disable no-param-reassign */
-import { SeatsTypesT } from '../../../../types/models/modelSeats';
 
 export const getCarriageName = (typeKey: string) => {
     switch (typeKey) {
@@ -29,11 +28,12 @@ export const getSeatName = (seatKey: string) => {
     }
 };
 
-export const getAllAvailable = (available: SeatsTypesT) => {
-    const allAvailable = Object.values(available).reduce<number>((total, value) => {
-        total += value;
-        return total;
-    }, 0);
+// export const getAllAvailable = (available: SeatsTypesT) => {
+//     console.log(available);
+//     const allAvailable = Object.values(available).reduce<number>((total, value) => {
+//         total += value;
+//         return total;
+//     }, 0);
 
-    return allAvailable;
-};
+//     return allAvailable;
+// };
