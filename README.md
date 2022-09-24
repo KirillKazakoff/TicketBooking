@@ -238,7 +238,7 @@ yarn start
 
 
 <!-- Links in text -->
-[GitPages]: https://kirillkazakoff.github.io/finalDiploma/
+[GitPages]: https://kirillkazakoff.github.io/TicketBooking/
 [portfolioSrc]: https://github.com/KirillKazakoff/portfolio/tree/master/src
 [mainPageGif]: ./assets/MainPage.gif
 [ticketsGif]: ./assets/tickets.gif
