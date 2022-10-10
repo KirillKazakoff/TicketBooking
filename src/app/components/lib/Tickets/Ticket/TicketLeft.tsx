@@ -5,7 +5,7 @@ import SvgTrain from '../../Svg/SvgTrain';
 export default function TicketLeft({ departure }: TicketLeftProps) {
     const { train, from, to } = departure;
 
-    const trainName = train.name.includes('undefined') ? 'Кот в хлебе' : train.name;
+    const trainName = train.name.includes('undefined') ? 'Брусника-123' : train.name;
 
     return (
         <aside className='ticket-aside-left'>
